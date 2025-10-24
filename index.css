@@ -192,3 +192,46 @@ body {
     font-size: 24px;
   }
 }
+
+.hamburger .bar:nth-child(1) {
+  animation: flipBar1 1s infinite;
+}
+
+.hamburger .bar:nth-child(2) {
+  animation: fadeBar2 1s infinite;
+}
+
+.hamburger .bar:nth-child(3) {
+  animation: flipBar3 1s infinite;
+}
+
+@keyframes flipBar1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg) translateX(4px) translateY(10px);
+    
+  }
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+    
+  }
+}
+
+@keyframes flipBar3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg) translate(4px, -10px);
+  }
+}
