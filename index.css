@@ -25,7 +25,7 @@ body {
   padding: 64px 0;
 }
 
-.navbar .bar {
+.navbar .bar1, .bar2, .bar3 {
   background-color: black;
   height: 4px;
   width: 36px;
@@ -193,16 +193,19 @@ body {
   }
 }
 
-.hamburger .bar:nth-child(1) {
-  animation: flipBar1 1s infinite;
+.animateBar1 {
+  animation: flipBar1 1s;
+  animation-fill-mode: forwards;
 }
 
-.hamburger .bar:nth-child(2) {
-  animation: fadeBar2 1s infinite;
+.animateBar2 {
+  animation: fadeBar2 1s;
+  animation-fill-mode: forwards;
 }
 
-.hamburger .bar:nth-child(3) {
-  animation: flipBar3 1s infinite;
+.animateBar3 {
+  animation: flipBar3 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes flipBar1 {
@@ -211,7 +214,6 @@ body {
   }
   to {
     transform: rotate(45deg) translateX(4px) translateY(10px);
-    
   }
 }
 
@@ -223,7 +225,6 @@ body {
   to {
     transform: scaleX(0);
     opacity: 0;
-    
   }
 }
 
@@ -235,3 +236,4 @@ body {
     transform: rotate(-45deg) translate(4px, -10px);
   }
 }
+
